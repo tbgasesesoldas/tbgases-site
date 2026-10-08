@@ -1,0 +1,10 @@
+# Sistema Operacional / Cache
+.DS_Store
+Thumbs.db
+
+# Materiais brutos locais (fotos em alta resolução, documentos e manuais)
+Banco de Imagens/
+Identidade Visual/
+moodboard.pdf
+*.docx
+scratch/

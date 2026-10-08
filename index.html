@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TB Gases & Soldas | Gases Industriais, Insumos e Equipamentos de Solda</title>
+  <meta name="description" content="A TB Gases abastece indústrias, serralherias e oficinas em Santa Cruz do Sul e região com gases industriais, insumos e equipamentos de solda. Entrega rápida e suporte técnico.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logo-horizontal.png">
+
+  <!-- Google Fonts: Outfit (geométrica da família de Garet) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Phosphor Icons CDN -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0c1017',
+              navy: '#121824',
+              surface: '#18202f',
+              border: '#242f44',
+              blue: '#1b64da',
+              red: '#e1251b',
+              yellow: '#f59e0b',
+              green: '#10b981',
+              whatsapp: '#25D366',
+              whatsappDark: '#128C7E',
+            }
+          },
+          fontFamily: {
+            sans: ['"Garet"', '"Outfit"', 'system-ui', 'sans-serif'],
+            display: ['"Garet"', '"Outfit"', 'system-ui', 'sans-serif'],
+            mono: ['"Garet"', '"Outfit"', 'system-ui', 'sans-serif'],
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          },
+          animation: {
+            marquee: 'marquee 28s linear infinite',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Suporte prioritário à fonte Garet local e fallback elegante */
+    @font-face {
+      font-family: 'Garet';
+      src: local('Garet'), local('Garet-Book'), local('Garet Bold');
+      font-display: swap;
+    }
+
+    *, html, body, button, input, select, textarea {
+      font-family: 'Garet', 'Outfit', system-ui, sans-serif !important;
+    }
+
+    h1, h2, h3, h4, h5, h6, .font-display {
+      font-family: 'Garet', 'Outfit', system-ui, sans-serif !important;
+      letter-spacing: -0.02em;
+    }
+
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+
+    .badge-gas {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 antialiased selection:bg-brand-red selection:text-white font-sans">
+
+  <!-- ========================================================================= -->
+  <!-- HEADER / NAVEGAÇÃO (Primeira seção do site) -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="assets/logo-header.svg" alt="TB Gases & Soldas" class="h-12 sm:h-13 w-auto object-contain">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-200">
+        <a href="#sobre" class="hover:text-brand-blue transition">Sobre a TB</a>
+        <a href="#produtos" class="hover:text-brand-blue transition">Produtos</a>
+        <a href="#como-trabalhamos" class="hover:text-brand-blue transition">Atendimento</a>
+        <a href="#diagnostico" class="hover:text-brand-blue transition">Recomendação Técnica</a>
+        <a href="#entregas" class="hover:text-brand-blue transition">Cidades Atendidas</a>
+        <a href="#faq" class="hover:text-brand-blue transition">Dúvidas</a>
+      </nav>
+
+      <!-- CTA WhatsApp -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20equipe%20da%20TB%20Gases." 
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2.5 px-4 sm:px-5 py-2.5 rounded-lg font-bold text-sm bg-brand-whatsapp hover:bg-brand-whatsappDark text-white shadow-lg shadow-emerald-950/40 transition duration-200 hover:-translate-y-0.5">
+          <i class="ph-fill ph-whatsapp-logo text-lg"></i>
+          <span>Falar no WhatsApp</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="lg:hidden p-2 text-slate-300 hover:text-white" aria-label="Abrir Menu">
+          <i class="ph ph-list text-2xl"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-brand-navy border-b border-brand-border px-6 py-4 space-y-3">
+      <a href="#sobre" class="block py-2 text-slate-200 hover:text-brand-blue font-medium border-b border-brand-border/40">Sobre a TB</a>
+      <a href="#produtos" class="block py-2 text-slate-200 hover:text-brand-blue font-medium border-b border-brand-border/40">Produtos</a>
+      <a href="#como-trabalhamos" class="block py-2 text-slate-200 hover:text-brand-blue font-medium border-b border-brand-border/40">Atendimento</a>
+      <a href="#diagnostico" class="block py-2 text-slate-200 hover:text-brand-blue font-medium border-b border-brand-border/40">Recomendação Técnica</a>
+      <a href="#entregas" class="block py-2 text-slate-200 hover:text-brand-blue font-medium border-b border-brand-border/40">Cidades Atendidas</a>
+      <a href="#faq" class="block py-2 text-slate-200 hover:text-brand-blue font-medium">Dúvidas Frequentes</a>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- HERO SECTION -->
+  <!-- ========================================================================= -->
+  <section class="relative bg-gradient-to-b from-brand-dark via-brand-navy to-[#0a111c] text-white pt-12 pb-20 lg:pt-16 lg:pb-24 overflow-hidden bg-grid-pattern">
+    
+    <!-- Efeitos luminosos sutis de fundo -->
+    <div class="absolute -top-32 right-1/4 w-96 h-96 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 left-10 w-80 h-80 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Texto Hero (7 colunas - amplitude ideal para a leitura confortável) -->
+        <div class="lg:col-span-7 space-y-6">
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.12]">
+            Gases industriais, insumos e equipamentos de solda, com <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-white">atendimento técnico</span> de verdade.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+            A <strong>TB Gases & Soldas</strong> abastece serralherias, oficinas e equipes de manutenção nos Vales do Rio Pardo e Taquari, com entrega rápida e suporte de quem entende do processo de soldagem.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row gap-3.5 pt-2">
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20minha%20empresa." 
+               target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base bg-brand-whatsapp hover:bg-brand-whatsappDark text-white shadow-xl shadow-emerald-950/50 transition duration-200 hover:-translate-y-0.5">
+              <i class="ph-fill ph-whatsapp-logo text-xl"></i>
+              <span>WhatsApp</span>
+            </a>
+
+            <a href="#produtos" 
+               class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base bg-white/10 hover:bg-white/15 text-white border border-white/20 transition duration-200">
+              <i class="ph ph-squares-four text-lg"></i>
+              <span>Ver produtos</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Foto da Frota (5 colunas - tamanho original de alta harmonia) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative w-full rounded-2xl overflow-hidden border-2 border-brand-border shadow-2xl shadow-black/70 bg-brand-surface group">
+            <img src="assets/img/hero-truck.jpg" 
+                 alt="Caminhão da frota própria TB Gases & Soldas carregado com cilindros de gases" 
+                 class="w-full h-[360px] sm:h-[420px] lg:h-[460px] object-cover object-center group-hover:scale-[1.02] transition duration-700">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-black/10"></div>
+
+            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-brand-dark/90 backdrop-blur-md border border-brand-border text-xs text-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="font-bold text-white uppercase tracking-wider">Logística Própria na Região</span>
+              </div>
+              <span class="text-slate-300">Entrega ágil e reposição contínua sem paradas na sua produção.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- TICKER CONTÍNUO (Diferenciais em movimento - Estilo Oxicam) -->
+  <!-- ========================================================================= -->
+  <div class="bg-slate-800 text-slate-200 py-3.5 overflow-hidden border-y border-slate-700 shadow-md">
+    <div class="flex whitespace-nowrap animate-marquee gap-10 font-bold text-sm tracking-widest uppercase">
+      <span class="flex items-center gap-3"><i class="ph-fill ph-check-circle"></i> Logística Própria e Ágil</span>
+      <span class="flex items-center gap-3"><i class="ph-fill ph-check-circle"></i> Atendimento Técnico Consultivo</span>
+      <span class="flex items-center gap-3"><i class="ph-fill ph-check-circle"></i> Sem burocracia no WhatsApp</span>
+      <span class="flex items-center gap-3"><i class="ph-fill ph-check-circle"></i> Reposição Programada para sua oficina</span>
+      <span class="flex items-center gap-3"><i class="ph-fill ph-check-circle"></i> Cilindros Certificados e Testados</span>
+      <span class="flex items-center gap-3"><i class="ph-fill ph-check-circle"></i> Gases, Insumos e Máquinas de Solda</span>
+      
+      <!-- Duplicação para loop contínuo -->
+      <span class="flex items-center gap-3"><i class="ph-fill ph-check-circle"></i> Logística Própria e Ágil</span>
+      <span class="flex items-center gap-3"><i class="ph-fill ph-check-circle"></i> Atendimento Técnico Consultivo</span>
+      <span class="flex items-center gap-3"><i class="ph-fill ph-check-circle"></i> Sem burocracia no WhatsApp</span>
+      <span class="flex items-center gap-3"><i class="ph-fill ph-check-circle"></i> Reposição Programada para sua oficina</span>
+      <span class="flex items-center gap-3"><i class="ph-fill ph-check-circle"></i> Cilindros Certificados e Testados</span>
+      <span class="flex items-center gap-3"><i class="ph-fill ph-check-circle"></i> Gases, Insumos e Máquinas de Solda</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SOBRE A TB GASES (Credibilidade e Posicionamento) -->
+  <!-- ========================================================================= -->
+  <section id="sobre" class="py-20 lg:py-28 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Texto Institucional (Tipografia unificada no mesmo tamanho) -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 text-brand-red font-bold text-xs uppercase tracking-widest">
+            <span class="w-6 h-0.5 bg-brand-red"></span>
+            Credibilidade
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Quem é a TB Gases & Soldas
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Desde 2005 em Santa Cruz do Sul, a TB Gases & Soldas fornece gases industriais, insumos e equipamentos para solda a empresas e profissionais dos Vales do Rio Pardo e Taquari.
+          </p>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Trabalhamos com quem depende de solda no dia a dia: serralherias, oficinas mecânicas, indústrias com equipe própria de manutenção e prestadores de serviço técnico. Por isso, entendemos que o que mais importa não é só o produto — é ter o produto certo, disponível quando é preciso.
+          </p>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Nosso diferencial está no atendimento técnico e na logística: orientação correta na escolha de gases, arames e equipamentos, e entrega ágil para que a operação do cliente nunca pare.
+          </p>
+
+          <!-- Números em Destaque -->
+          <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-200">
+            <div>
+              <p class="text-3xl sm:text-4xl font-black text-brand-navy">20+</p>
+              <p class="text-xs sm:text-sm font-semibold text-slate-500 mt-1">Anos de atuação no mercado</p>
+            </div>
+            <div>
+              <p class="text-3xl sm:text-4xl font-black text-brand-blue">2</p>
+              <p class="text-xs sm:text-sm font-semibold text-slate-500 mt-1">Regiões: Rio Pardo e Taquari</p>
+            </div>
+            <div>
+              <p class="text-3xl sm:text-4xl font-black text-brand-red">3</p>
+              <p class="text-xs sm:text-sm font-semibold text-slate-500 mt-1">Linhas: gases, insumos e máquinas</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Mídia: Foto do Técnico de Pé na Orientação Correta -->
+        <div class="lg:col-span-6">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-100">
+            <img src="assets/img/about-operator.jpg?v=3" 
+                 alt="Técnico da TB Gases realizando manuseio seguro de cilindro no caminhão" 
+                 class="w-full h-[480px] sm:h-[540px] object-cover object-center">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <span class="inline-block px-3 py-1 rounded-md bg-brand-red text-xs font-bold uppercase tracking-wider mb-2">Atendimento Técnico</span>
+              <h4 class="text-xl font-bold">Orientação correta na escolha do gás e insumo</h4>
+              <p class="text-sm text-slate-300 mt-1">Garantia de pureza e suporte prático para quem está envolvido na operação.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- PRODUTOS (Gases, Insumos e Equipamentos) -->
+  <!-- ========================================================================= -->
+  <section id="produtos" class="py-20 lg:py-28 bg-[#f8fafc] border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div class="space-y-3 max-w-2xl">
+          <div class="inline-flex items-center gap-2 text-brand-red font-bold text-xs uppercase tracking-widest">
+            <span class="w-6 h-0.5 bg-brand-red"></span>
+            Linha Completa de Fornecimento
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Produtos & Insumos para Soldagem
+          </h2>
+          <p class="text-slate-600 text-base">
+            Gases certificados, consumíveis de alta performance e máquinas robustas. Selecione uma categoria para visualizar os itens:
+          </p>
+        </div>
+
+        <!-- Filtros / Abas -->
+        <div class="mt-6 md:mt-0 flex flex-wrap gap-2 p-1.5 bg-slate-200/80 rounded-xl border border-slate-300/60">
+          <button onclick="filterCategory('gases')" id="tab-gases" class="tab-btn active px-4 py-2 rounded-lg text-sm font-bold bg-brand-navy text-white shadow-sm transition">
+            Gases Industriais
+          </button>
+          <button onclick="filterCategory('insumos')" id="tab-insumos" class="tab-btn px-4 py-2 rounded-lg text-sm font-bold text-slate-700 hover:text-slate-950 transition">
+            Insumos de Solda
+          </button>
+          <button onclick="filterCategory('equipamentos')" id="tab-equipamentos" class="tab-btn px-4 py-2 rounded-lg text-sm font-bold text-slate-700 hover:text-slate-950 transition">
+            Equipamentos & Máquinas
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= CATÁLOGO: GASES ================= -->
+      <div id="cat-gases" class="category-block space-y-6">
+        <div class="p-4 rounded-xl bg-blue-50/80 border border-blue-200 flex items-center justify-between">
+          <p class="text-sm text-blue-950 font-medium">
+            <i class="ph-fill ph-info text-brand-blue mr-1.5"></i> Fornecemos os principais gases usados em processos de solda, corte e outras aplicações industriais, com orientação sobre o gás correto para cada processo.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Card Oxigênio -->
+          <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative w-full h-48 sm:h-52 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center p-3 mb-4 overflow-hidden group-hover:bg-slate-100/70 transition duration-300">
+                <img src="assets/produtos/cilindro-oxigenio.png?v=4" alt="Cilindro de Oxigênio Industrial" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+              </div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-gas bg-emerald-100 text-emerald-800 border border-emerald-300">Oxigênio (O₂)</span>
+                <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Grau Industrial</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Oxigênio Industrial</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Indicado para processos de oxicorte, solda oxiacetilênica e aquecimento de peças metálicas.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+                <li class="flex items-center gap-1.5"><i class="ph ph-check text-emerald-500"></i> Alta pureza para corte limpo</li>
+                <li class="flex items-center gap-1.5"><i class="ph ph-check text-emerald-500"></i> Cilindros testados e lacrados</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Oxig%C3%AAnio%20Industrial." 
+               target="_blank" rel="noopener"
+               class="w-full py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-brand-whatsapp hover:text-white text-slate-800 text-xs font-bold transition flex items-center justify-center gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-base"></i> Cotar Oxigênio
+            </a>
+          </div>
+
+          <!-- Card Acetileno -->
+          <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-red/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative w-full h-48 sm:h-52 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center p-3 mb-4 overflow-hidden group-hover:bg-slate-100/70 transition duration-300">
+                <img src="assets/produtos/cilindro-acetileno.png?v=4" alt="Cilindro de Acetileno" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+              </div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-gas bg-red-100 text-brand-red border border-red-300">Acetileno (C₂H₂)</span>
+                <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Gás Combustível</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Acetileno</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Gás de maior temperatura de chama, ideal para brasagem, corte severo e soldas em geral.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+                <li class="flex items-center gap-1.5"><i class="ph ph-check text-emerald-500"></i> Chama concentrada de alto rendimento</li>
+                <li class="flex items-center gap-1.5"><i class="ph ph-check text-emerald-500"></i> Reposição ágil em estoque</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Acetileno." 
+               target="_blank" rel="noopener"
+               class="w-full py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-brand-whatsapp hover:text-white text-slate-800 text-xs font-bold transition flex items-center justify-center gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-base"></i> Cotar Acetileno
+            </a>
+          </div>
+
+          <!-- Card Mistura Ar/CO2 -->
+          <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative w-full h-48 sm:h-52 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center p-3 mb-4 overflow-hidden group-hover:bg-slate-100/70 transition duration-300">
+                <img src="assets/produtos/cilindro-mistura.png?v=4" alt="Cilindro de Mistura para Solda Ar/CO2" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+              </div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-gas bg-blue-100 text-brand-blue border border-blue-300">Mistura Ar/CO₂</span>
+                <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Solda MIG/MAG</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Mistura para Solda (Ar/CO₂)</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Proporção balanceada para excelente penetração e redução drástica de respingos na solda MIG.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+                <li class="flex items-center gap-1.5"><i class="ph ph-check text-emerald-500"></i> Menor retrabalho de acabamento</li>
+                <li class="flex items-center gap-1.5"><i class="ph ph-check text-emerald-500"></i> Arco elétrico mais estável</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Mistura%20Ar%2FCO2." 
+               target="_blank" rel="noopener"
+               class="w-full py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-brand-whatsapp hover:text-white text-slate-800 text-xs font-bold transition flex items-center justify-center gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-base"></i> Cotar Mistura MIG
+            </a>
+          </div>
+
+          <!-- Card CO2 Puro -->
+          <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative w-full h-48 sm:h-52 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center p-3 mb-4 overflow-hidden group-hover:bg-slate-100/70 transition duration-300">
+                <img src="assets/produtos/cilindro-dioxido.png?v=4" alt="Cilindro de Dióxido de Carbono CO2" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+              </div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-gas bg-slate-200 text-slate-800 border border-slate-300">CO₂ Puro</span>
+                <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Dióxido de Carbono</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Dióxido de Carbono (CO₂)</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Opção econômica para soldagem de aços carbono com boa penetração em chapas médias e grossas.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+                <li class="flex items-center gap-1.5"><i class="ph ph-check text-emerald-500"></i> Aplicação industrial e manutenção</li>
+                <li class="flex items-center gap-1.5"><i class="ph ph-check text-emerald-500"></i> Disponibilidade imediata</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Dioxido%20de%20Carbono%20CO2." 
+               target="_blank" rel="noopener"
+               class="w-full py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-brand-whatsapp hover:text-white text-slate-800 text-xs font-bold transition flex items-center justify-center gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-base"></i> Cotar CO₂
+            </a>
+          </div>
+
+          <!-- Card Nitrogênio -->
+          <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative w-full h-48 sm:h-52 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center p-3 mb-4 overflow-hidden group-hover:bg-slate-100/70 transition duration-300">
+                <img src="assets/produtos/cilindro-nitrogenio.png?v=4" alt="Cilindro de Nitrogênio" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+              </div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge-gas bg-amber-100 text-amber-900 border border-amber-300">Nitrogênio (N₂)</span>
+                <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Inerte & Pressurização</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Nitrogênio</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Gás inerte utilizado para purga de tubulações, teste de estanqueidade e corte a laser.
+              </p>
+              <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+                <li class="flex items-center gap-1.5"><i class="ph ph-check text-emerald-500"></i> Testes de pressão sem oxidação</li>
+                <li class="flex items-center gap-1.5"><i class="ph ph-check text-emerald-500"></i> Cilindros de alta capacidade</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Nitrog%C3%AAnio." 
+               target="_blank" rel="noopener"
+               class="w-full py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-brand-whatsapp hover:text-white text-slate-800 text-xs font-bold transition flex items-center justify-center gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-base"></i> Cotar Nitrogênio
+            </a>
+          </div>
+
+          <!-- Card Especial: Outros Gases -->
+          <div class="p-6 rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 hover:border-brand-blue transition duration-200 flex flex-col justify-between text-center items-center">
+            <div class="py-4">
+              <div class="w-12 h-12 rounded-full bg-brand-surface text-brand-blue flex items-center justify-center mx-auto mb-3 text-xl">
+                <i class="ph ph-flask"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-1">Precisa de outro gás?</h3>
+              <p class="text-xs text-slate-500 mb-3">Argônio Puro, Hélio ou Misturas Especiais sob medida para sua indústria.</p>
+              <p class="text-xs font-semibold text-brand-navy">Fale com a nossa equipe!</p>
+            </div>
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Preciso%20de%20uma%20mistura%20ou%20g%C3%A1s%20especial%20n%C3%A3o%20listado." 
+               target="_blank" rel="noopener"
+               class="w-full py-2.5 px-4 rounded-lg bg-brand-navy hover:bg-brand-blue text-white text-xs font-bold transition flex items-center justify-center gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-base"></i> Consultar Disponibilidade
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= CATÁLOGO: INSUMOS ================= -->
+      <div id="cat-insumos" class="category-block hidden space-y-6">
+        <div class="p-4 rounded-xl bg-amber-50/80 border border-amber-200 flex items-center justify-between">
+          <p class="text-sm text-amber-950 font-medium">
+            <i class="ph-fill ph-info text-amber-600 mr-1.5"></i> Consumíveis e acessórios para os principais processos de soldagem (MIG, TIG e eletrodo revestido), com disponibilidade para reposição frequente.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative w-full h-48 sm:h-52 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center p-3 mb-4 overflow-hidden group-hover:bg-slate-100/70 transition duration-300">
+                <img src="assets/produtos/arame-de-solda-mig.png?v=4" alt="Arame de Solda MIG Cobreado" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+              </div>
+              <span class="badge-gas bg-blue-100 text-brand-blue border border-blue-200 mb-3">MIG / MAG</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Arame MIG Cobreado</h3>
+              <p class="text-sm text-slate-600 mb-4">Bobinas de 15kg e 5kg nos diâmetros 0,8mm, 1,0mm e 1,2mm para soldagem contínua de aço carbono.</p>
+              <ul class="text-xs text-slate-500 space-y-1 mb-6">
+                <li>&bull; Excelente desbobinamento e condutividade</li>
+                <li>&bull; Homologado para trabalho profissional</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7amento%20para%20Arame%20MIG." target="_blank" rel="noopener"
+               class="w-full py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-brand-whatsapp hover:text-white text-slate-800 text-xs font-bold transition flex items-center justify-center gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-base"></i> Cotar Arame MIG
+            </a>
+          </div>
+
+          <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative w-full h-48 sm:h-52 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center p-3 mb-4 overflow-hidden group-hover:bg-slate-100/70 transition duration-300">
+                <img src="assets/produtos/eletrodo-de-solda.png?v=4" alt="Eletrodos de Solda E6013 e E7018" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+              </div>
+              <span class="badge-gas bg-emerald-100 text-emerald-800 border border-emerald-200 mb-3">Eletrodo Revestido</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Eletrodos E6013 e E7018</h3>
+              <p class="text-sm text-slate-600 mb-4">Eletrodos para serralheria geral, caldeiraria pesada, estruturas e manutenção mecânica.</p>
+              <ul class="text-xs text-slate-500 space-y-1 mb-6">
+                <li>&bull; Diâmetros 2,5mm, 3,25mm e 4,0mm</li>
+                <li>&bull; Caixas lacradas para proteção contra umidade</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7amento%20para%20Eletrodos." target="_blank" rel="noopener"
+               class="w-full py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-brand-whatsapp hover:text-white text-slate-800 text-xs font-bold transition flex items-center justify-center gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-base"></i> Cotar Eletrodos
+            </a>
+          </div>
+
+          <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative w-full h-48 sm:h-52 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center p-3 mb-4 overflow-hidden group-hover:bg-slate-100/70 transition duration-300">
+                <img src="assets/produtos/consumiveis-e-acessorios.png?v=4" alt="Consumíveis, Tochas e Acessórios de Solda" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+              </div>
+              <span class="badge-gas bg-purple-100 text-purple-800 border border-purple-200 mb-3">Consumíveis & Tochas</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Tochas, Bicos & Difusores</h3>
+              <p class="text-sm text-slate-600 mb-4">Linha completa de peças de desgaste: tochas MIG/TIG, bocais, difusores, guia-espiral e tochas em geral.</p>
+              <ul class="text-xs text-slate-500 space-y-1 mb-6">
+                <li>&bull; Padrão compatível com as maiores marcas</li>
+                <li>&bull; Reposição rápida para sua oficina não parar</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7amento%20para%20Tochas%20e%20Consum%C3%ADveis." target="_blank" rel="noopener"
+               class="w-full py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-brand-whatsapp hover:text-white text-slate-800 text-xs font-bold transition flex items-center justify-center gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-base"></i> Cotar Consumíveis
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= CATÁLOGO: EQUIPAMENTOS ================= -->
+      <div id="cat-equipamentos" class="category-block hidden space-y-6">
+        <div class="p-4 rounded-xl bg-red-50/80 border border-red-200 flex items-center justify-between">
+          <p class="text-sm text-red-950 font-medium">
+            <i class="ph-fill ph-info text-brand-red mr-1.5"></i> Máquinas e inversores para diferentes processos e níveis de uso, com orientação para escolher o equipamento adequado à sua operação.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative w-full h-48 sm:h-52 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center p-3 mb-4 overflow-hidden group-hover:bg-slate-100/70 transition duration-300">
+                <img src="assets/produtos/maquina-de-solda-mig.png?v=4" alt="Máquina de Solda MIG/MAG" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+              </div>
+              <span class="badge-gas bg-blue-100 text-brand-blue border border-blue-200 mb-3">MIG / MAG Industrial</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Máquinas de Solda MIG/MAG</h3>
+              <p class="text-sm text-slate-600 mb-4">Inversoras e fontes compactas e industriais para média e alta produtividade em estruturas e chaparias.</p>
+              <ul class="text-xs text-slate-500 space-y-1 mb-6">
+                <li>&bull; Modelos monofásicos e trifásicos</li>
+                <li>&bull; Ciclo de trabalho robusto e garantido</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20indica%C3%A7%C3%A3o%20de%20M%C3%A1quina%20MIG." target="_blank" rel="noopener"
+               class="w-full py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-brand-whatsapp hover:text-white text-slate-800 text-xs font-bold transition flex items-center justify-center gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-base"></i> Consultar Modelos MIG
+            </a>
+          </div>
+
+          <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative w-full h-48 sm:h-52 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center p-3 mb-4 overflow-hidden group-hover:bg-slate-100/70 transition duration-300">
+                <img src="assets/produtos/inversor-de-solda.png?v=4" alt="Inversor de Solda Eletrodo MMA" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+              </div>
+              <span class="badge-gas bg-emerald-100 text-emerald-800 border border-emerald-200 mb-3">Portátil & Potente</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Inversores Eletrodo (MMA)</h3>
+              <p class="text-sm text-slate-600 mb-4">Leves, econômicas e portáteis. Ideais para montagens externas, serralheiros e manutenções de campo.</p>
+              <ul class="text-xs text-slate-500 space-y-1 mb-6">
+                <li>&bull; Tecnologia IGBT com arco estável</li>
+                <li>&bull; Função Hot Start e Anti-Stick</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20indica%C3%A7%C3%A3o%20de%20Inversora%20Eletrodo." target="_blank" rel="noopener"
+               class="w-full py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-brand-whatsapp hover:text-white text-slate-800 text-xs font-bold transition flex items-center justify-center gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-base"></i> Consultar Inversores
+            </a>
+          </div>
+
+          <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative w-full h-48 sm:h-52 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center p-3 mb-4 overflow-hidden group-hover:bg-slate-100/70 transition duration-300">
+                <img src="assets/produtos/maquina-de-solda-tig.png?v=4" alt="Máquina de Solda TIG AC/DC" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+              </div>
+              <span class="badge-gas bg-purple-100 text-purple-800 border border-purple-200 mb-3">Alta Precisão</span>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Máquinas de Solda TIG (AC/DC)</h3>
+              <p class="text-sm text-slate-600 mb-4">Para acabamentos nobres, soldagem de inox, tubulações sanitárias e ligas de alumínio.</p>
+              <ul class="text-xs text-slate-500 space-y-1 mb-6">
+                <li>&bull; Alta frequência (HF) para abertura de arco sem contato</li>
+                <li>&bull; Controle fino de corrente e rampa</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20indica%C3%A7%C3%A3o%20de%20M%C3%A1quina%20TIG." target="_blank" rel="noopener"
+               class="w-full py-2.5 px-4 rounded-lg bg-slate-100 hover:bg-brand-whatsapp hover:text-white text-slate-800 text-xs font-bold transition flex items-center justify-center gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-base"></i> Consultar Linha TIG
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- ATENDIMENTO (Como trabalhamos) -->
+  <!-- ========================================================================= -->
+  <section id="como-trabalhamos" class="py-20 lg:py-28 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 text-brand-blue font-bold text-xs uppercase tracking-widest">
+          <span class="w-6 h-0.5 bg-brand-blue"></span>
+          Processo Descomplicado
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Atendimento técnico, do pedido à entrega
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Desenvolvemos um fluxo pensado para que sua serralheria ou fábrica economize tempo e receba o produto ideal sem dores de cabeça.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Bloco 1 -->
+        <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-blue-100 border border-blue-200 text-brand-blue flex items-center justify-center text-2xl font-bold mb-6">
+              <i class="ph ph-chat-teardrop-dots"></i>
+            </div>
+            <div class="text-xs font-bold text-brand-blue uppercase mb-1 tracking-wider">Passo 01</div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Orientação Técnica</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Ajudamos a definir o gás, o arame ou o equipamento certo para o seu processo de soldagem, evitando compra errada e retrabalho.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex items-center gap-2 text-xs font-semibold text-slate-500">
+            <i class="ph-fill ph-check-circle text-emerald-500 text-base"></i> Sem dúvidas no processo
+          </div>
+        </div>
+
+        <!-- Bloco 2 -->
+        <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-emerald-100 border border-emerald-200 text-brand-whatsappDark flex items-center justify-center text-2xl font-bold mb-6">
+              <i class="ph ph-lightning"></i>
+            </div>
+            <div class="text-xs font-bold text-brand-whatsappDark uppercase mb-1 tracking-wider">Passo 02</div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Pedido Rápido</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Atendimento direto por WhatsApp, sem burocracia, para orçamento e reposição de itens recorrentes.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex items-center gap-2 text-xs font-semibold text-slate-500">
+            <i class="ph-fill ph-check-circle text-emerald-500 text-base"></i> Resposta em minutos
+          </div>
+        </div>
+
+        <!-- Bloco 3 -->
+        <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-red-100 border border-red-200 text-brand-red flex items-center justify-center text-2xl font-bold mb-6">
+              <i class="ph ph-truck"></i>
+            </div>
+            <div class="text-xs font-bold text-brand-red uppercase mb-1 tracking-wider">Passo 03</div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Entrega na Região</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Logística própria para os Vales do Rio Pardo e Taquari, com prazos pensados para não parar a produção do cliente.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex items-center gap-2 text-xs font-semibold text-slate-500">
+            <i class="ph-fill ph-check-circle text-emerald-500 text-base"></i> Frota dedicada
+          </div>
+        </div>
+
+        <!-- Bloco 4 -->
+        <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-amber-100 border border-amber-200 text-amber-700 flex items-center justify-center text-2xl font-bold mb-6">
+              <i class="ph ph-arrows-clockwise"></i>
+            </div>
+            <div class="text-xs font-bold text-amber-700 uppercase mb-1 tracking-wider">Passo 04</div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Relacionamento Contínuo</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Acompanhamos o consumo do cliente para antecipar reposições de gases e insumos, evitando falta de material na operação.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex items-center gap-2 text-xs font-semibold text-slate-500">
+            <i class="ph-fill ph-check-circle text-emerald-500 text-base"></i> Produção sempre ativa
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SELETOR CONSULTIVO / DIAGNÓSTICO (Inspirado na Versátil SC) -->
+  <!-- ========================================================================= -->
+  <section id="diagnostico" class="py-20 lg:py-24 bg-gradient-to-br from-brand-dark via-brand-navy to-[#0a101a] text-white relative overflow-hidden">
+    
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 text-brand-yellow font-bold text-xs uppercase tracking-widest">
+          <i class="ph-fill ph-lightbulb text-base"></i> Orientação Sem Compromisso
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Não sabe qual gás, arame ou máquina escolher?
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Antes de indicar, nós entendemos a sua operação. Selecione as opções abaixo e envie diretamente para a nossa equipe técnica analisar no WhatsApp:
+        </p>
+      </div>
+
+      <!-- Caixa Interativa do Diagnóstico -->
+      <div class="bg-brand-surface/90 border border-brand-border rounded-2xl p-6 sm:p-10 shadow-2xl backdrop-blur-md">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Pergunta 1: Segmento / Aplicação -->
+          <div>
+            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">
+              1. Qual o tipo da sua operação?
+            </label>
+            <select id="diag-op" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:border-brand-blue focus:outline-none">
+              <option value="Serralheria / Estruturas Metálicas">Serralheria / Estruturas Metálicas</option>
+              <option value="Oficina Mecânica / Funilaria">Oficina Mecânica / Funilaria</option>
+              <option value="Manutenção Industrial / Fábrica">Manutenção Industrial / Fábrica</option>
+              <option value="Prestador de Serviço Técnico">Prestador de Serviço Técnico</option>
+              <option value="Outra Aplicação">Outra Aplicação</option>
+            </select>
+          </div>
+
+          <!-- Pergunta 2: Material -->
+          <div>
+            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">
+              2. Qual material você vai soldar?
+            </label>
+            <select id="diag-mat" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:border-brand-blue focus:outline-none">
+              <option value="Aço Carbono (Ferro comum)">Aço Carbono (Ferro comum)</option>
+              <option value="Aço Inoxidável (Inox)">Aço Inoxidável (Inox)</option>
+              <option value="Alumínio e Ligas Leves">Alumínio e Ligas Leves</option>
+              <option value="Vários materiais combinados">Vários materiais combinados</option>
+            </select>
+          </div>
+
+          <!-- Pergunta 3: Processo de Solda -->
+          <div>
+            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">
+              3. Qual o processo principal?
+            </label>
+            <select id="diag-proc" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:border-brand-blue focus:outline-none">
+              <option value="Solda MIG / MAG com gás">Solda MIG / MAG com gás</option>
+              <option value="Eletrodo Revestido (MMA)">Eletrodo Revestido (MMA)</option>
+              <option value="Solda TIG (Inox/Alumínio)">Solda TIG (Inox/Alumínio)</option>
+              <option value="Oxicorte / Aquecimento">Oxicorte / Aquecimento</option>
+              <option value="Ainda não sei, quero recomendação">Ainda não sei, quero recomendação</option>
+            </select>
+          </div>
+
+          <!-- Pergunta 4: Município -->
+          <div>
+            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">
+              4. Onde será a entrega?
+            </label>
+            <select id="diag-cidade" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:border-brand-blue focus:outline-none">
+              <option value="Santa Cruz do Sul">Santa Cruz do Sul</option>
+              <option value="Vera Cruz">Vera Cruz</option>
+              <option value="Venâncio Aires">Venâncio Aires</option>
+              <option value="Candelária">Candelária</option>
+              <option value="Vale do Sol">Vale do Sol</option>
+              <option value="Sinimbu">Sinimbu</option>
+              <option value="Passo do Sobrado">Passo do Sobrado</option>
+              <option value="Vale Verde">Vale Verde</option>
+              <option value="Herveiras">Herveiras</option>
+              <option value="Outro município da região">Outro município da região</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Botão Dinâmico de Envio para WhatsApp -->
+        <div class="mt-8 pt-8 border-t border-brand-border/80 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="text-xs text-slate-400 flex items-center gap-2">
+            <i class="ph-fill ph-shield-check text-emerald-400 text-lg"></i>
+            <span>Nossa equipe responderá com a composição ideal de gás, arame e equipamento.</span>
+          </div>
+
+          <button onclick="enviarDiagnostico()" 
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-extrabold text-sm bg-brand-whatsapp hover:bg-brand-whatsappDark text-white shadow-xl shadow-emerald-950/60 transition duration-200">
+            <i class="ph-fill ph-whatsapp-logo text-xl"></i>
+            <span>Receber Indicação no WhatsApp</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- ÁREA DE ATENDIMENTO / CIDADES ATENDIDAS -->
+  <!-- ========================================================================= -->
+  <section id="entregas" class="py-20 lg:py-28 bg-[#f8fafc] border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Texto e Cidades -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 text-brand-red font-bold text-xs uppercase tracking-widest">
+            <span class="w-6 h-0.5 bg-brand-red"></span>
+            Área de Atendimento / Entregas
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Onde entregamos
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Atendemos empresas e profissionais do <strong>Vale do Rio Pardo</strong> e do <strong>Vale do Taquari</strong>, com entrega própria e prazos combinados conforme a urgência da sua operação.
+          </p>
+
+          <!-- Badges dos 9 municípios -->
+          <div class="pt-2">
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Municípios atendidos com rotas frequentes:</p>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs font-bold hover:bg-brand-navy hover:text-white transition shadow-sm">
+                <i class="ph-fill ph-map-pin text-brand-red"></i> Santa Cruz do Sul
+              </span>
+              <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs font-bold hover:bg-brand-navy hover:text-white transition shadow-sm">
+                <i class="ph-fill ph-map-pin text-brand-red"></i> Vera Cruz
+              </span>
+              <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs font-bold hover:bg-brand-navy hover:text-white transition shadow-sm">
+                <i class="ph-fill ph-map-pin text-brand-red"></i> Venâncio Aires
+              </span>
+              <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs font-bold hover:bg-brand-navy hover:text-white transition shadow-sm">
+                <i class="ph-fill ph-map-pin text-brand-red"></i> Candelária
+              </span>
+              <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs font-bold hover:bg-brand-navy hover:text-white transition shadow-sm">
+                <i class="ph-fill ph-map-pin text-brand-red"></i> Vale do Sol
+              </span>
+              <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs font-bold hover:bg-brand-navy hover:text-white transition shadow-sm">
+                <i class="ph-fill ph-map-pin text-brand-red"></i> Sinimbu
+              </span>
+              <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs font-bold hover:bg-brand-navy hover:text-white transition shadow-sm">
+                <i class="ph-fill ph-map-pin text-brand-red"></i> Passo do Sobrado
+              </span>
+              <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs font-bold hover:bg-brand-navy hover:text-white transition shadow-sm">
+                <i class="ph-fill ph-map-pin text-brand-red"></i> Vale Verde
+              </span>
+              <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs font-bold hover:bg-brand-navy hover:text-white transition shadow-sm">
+                <i class="ph-fill ph-map-pin text-brand-red"></i> Herveiras
+              </span>
+            </div>
+          </div>
+
+          <div class="pt-4 flex items-center gap-4">
+            <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20confirmar%20se%20voc%C3%AAs%20atendem%20minha%20cidade." 
+               target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 text-sm font-bold text-brand-blue hover:text-blue-800">
+              <span>Confirme se atendemos sua cidade — fale conosco</span>
+              <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Foto do Motorista e Caminhão Delivery (Em pé, vertical) -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-100">
+            <img src="assets/img/team-driver.jpg?v=3" 
+                 alt="Motorista da TB Gases com o caminhão Delivery em Santa Cruz do Sul" 
+                 class="w-full h-[480px] sm:h-[540px] object-cover object-center">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                <span class="text-xs font-bold uppercase tracking-wider">Logística Integrada</span>
+              </div>
+              <h4 class="text-lg font-bold">Entrega pontual na porta da sua empresa</h4>
+              <p class="text-xs text-slate-300 mt-1">Cilindros prontos para abastecer sua operação com agilidade.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- DÚVIDAS FREQUENTES (FAQ) -->
+  <!-- ========================================================================= -->
+  <section id="faq" class="py-20 lg:py-24 bg-white border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 text-brand-blue font-bold text-xs uppercase tracking-widest">
+          <span class="w-6 h-0.5 bg-brand-blue"></span>
+          Respostas Rápidas
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Dúvidas Frequentes
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Tire suas dúvidas sobre fornecimento, entregas e suporte técnico.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Pergunta 1 -->
+        <div class="faq-item bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center text-base hover:text-brand-blue transition">
+            <span>Como funciona a reposição de gases industriais?</span>
+            <i class="ph ph-caret-down text-slate-400 text-lg transition duration-200"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
+            Você pode solicitar a recarga diretamente pelo WhatsApp. Entregamos os cilindros cheios e recolhemos os cilindros vazios no seu estabelecimento dentro da rota programada.
+          </div>
+        </div>
+
+        <!-- Pergunta 2 -->
+        <div class="faq-item bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center text-base hover:text-brand-blue transition">
+            <span>Vocês trabalham com cilindros próprios ou em comodato?</span>
+            <i class="ph ph-caret-down text-slate-400 text-lg transition duration-200"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
+            Atendemos tanto clientes que possuem cilindros próprios quanto empresas que necessitam de regimes de comodato/locação conforme o volume e a frequência de consumo. Converse com nossa equipe para definir o melhor modelo para o seu negócio.
+          </div>
+        </div>
+
+        <!-- Pergunta 3 -->
+        <div class="faq-item bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center text-base hover:text-brand-blue transition">
+            <span>Qual a mistura de gás recomendada para solda MIG em aço carbono?</span>
+            <i class="ph ph-caret-down text-slate-400 text-lg transition duration-200"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
+            A mistura padrão mais recomendada é Ar/CO₂ (geralmente 75% a 80% de Argônio e restante de Dióxido de Carbono). Ela reduz drasticamente os respingos, gera um cordão de solda mais limpo e melhora a produtividade em comparação ao CO₂ puro.
+          </div>
+        </div>
+
+        <!-- Pergunta 4 -->
+        <div class="faq-item bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="w-full text-left p-5 font-bold text-slate-900 flex justify-between items-center text-base hover:text-brand-blue transition">
+            <span>Como faço para fazer um pedido com urgência?</span>
+            <i class="ph ph-caret-down text-slate-400 text-lg transition duration-200"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
+            Basta enviar uma mensagem no nosso WhatsApp oficial (51) 99216-6743 ou ligar no (51) 3715-6414 sinalizando a urgência. Nossa logística prioriza pedidos emergenciais para evitar parada da sua produção.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CHAMADA FINAL PARA CONTATO (CTA) -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-20 bg-brand-dark text-white relative overflow-hidden bg-grid-pattern">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+      
+      <span class="badge-gas bg-brand-red text-white">Atendimento Direto</span>
+
+      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
+        Precisa de gás, insumo ou equipamento de solda?
+      </h2>
+
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        Fale agora com a equipe da <strong>TB Gases & Soldas</strong> e receba orientação técnica e um orçamento rápido.
+      </p>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20com%20a%20TB%20Gases." 
+           target="_blank" rel="noopener"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-extrabold text-base bg-brand-whatsapp hover:bg-brand-whatsappDark text-white shadow-xl shadow-emerald-950/60 transition duration-200">
+          <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+          <span>Chamar no WhatsApp</span>
+        </a>
+
+        <a href="tel:555137156414" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-bold text-sm bg-white/10 hover:bg-white/15 text-white border border-white/20 transition duration-200">
+          <i class="ph ph-phone text-lg"></i>
+          <span>Prefere ligar? (51) 3715-6414</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- RODAPÉ INSTITUCIONAL -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#070a0f] text-slate-400 text-sm py-16 border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        
+        <!-- Coluna 1: Logo & Frase Institucional -->
+        <div class="space-y-4">
+          <img src="assets/logo-header.svg" alt="TB Gases & Soldas" class="h-12 w-auto object-contain">
+          <p class="text-xs text-slate-400 leading-relaxed">
+            TB Gases & Soldas — gases industriais, insumos e equipamentos de solda, com atendimento técnico e entrega na região.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://instagram.com/tbgases" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-slate-300 hover:text-white hover:border-brand-red transition">
+              <i class="ph ph-instagram-logo text-lg"></i>
+            </a>
+            <a href="https://wa.me/5551992166743" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-slate-300 hover:text-white hover:border-brand-whatsapp transition">
+              <i class="ph ph-whatsapp-logo text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Navegação -->
+        <div>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Navegação</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#sobre" class="hover:text-white transition">Sobre</a></li>
+            <li><a href="#produtos" class="hover:text-white transition">Produtos</a></li>
+            <li><a href="#como-trabalhamos" class="hover:text-white transition">Atendimento</a></li>
+            <li><a href="#entregas" class="hover:text-white transition">Onde Entregamos</a></li>
+            <li><a href="#faq" class="hover:text-white transition">Dúvidas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Contato & Atendimento -->
+        <div>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Atendimento</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li class="flex items-start gap-2">
+              <i class="ph-fill ph-whatsapp-logo text-brand-whatsapp text-sm mt-0.5"></i>
+              <span>WhatsApp: <a href="https://wa.me/5551992166743" class="hover:text-white font-semibold">(51) 99216-6743</a></span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="ph-fill ph-phone text-slate-300 text-sm mt-0.5"></i>
+              <span>Telefone: (51) 3715-6414 / 3715-2221</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="ph-fill ph-envelope text-slate-300 text-sm mt-0.5"></i>
+              <span>E-mail: tbgases@tbgases.com.br</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="ph-fill ph-clock text-slate-300 text-sm mt-0.5"></i>
+              <span>Seg a Sex: 07h30 às 11h45 | 13h15 às 17h45</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Endereço & Localização -->
+        <div>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Endereço</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Av. Gaspar Bartholomay, 286 - Sala 2<br>
+            Santa Cruz do Sul/RS
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Linha Final de Direitos -->
+      <div class="mt-12 pt-8 border-t border-brand-border/60 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <p>&copy; 2026 TB Gases & Soldas. Todos os direitos reservados.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <!-- ========================================================================= -->
+  <a href="https://wa.me/5551992166743?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20TB%20Gases." 
+     target="_blank" rel="noopener"
+     class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white p-3 sm:px-4 sm:py-3 rounded-full shadow-2xl hover:scale-105 transition duration-200 group"
+     aria-label="Falar no WhatsApp">
+    <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+    <span class="hidden sm:inline font-bold text-sm pr-1">Falar no WhatsApp</span>
+  </a>
+
+  <!-- ========================================================================= -->
+  <!-- SCRIPTS INTERATIVOS -->
+  <!-- ========================================================================= -->
+  <script>
+    // Menu Mobile
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Abas do Catálogo de Produtos
+    function filterCategory(cat) {
+      document.querySelectorAll('.category-block').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-brand-navy', 'text-white');
+        btn.classList.add('text-slate-700');
+      });
+
+      const activeBlock = document.getElementById('cat-' + cat);
+      const activeBtn = document.getElementById('tab-' + cat);
+
+      if (activeBlock) activeBlock.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.classList.add('active', 'bg-brand-navy', 'text-white');
+        activeBtn.classList.remove('text-slate-700');
+      }
+    }
+
+    // FAQ Acordeão
+    document.querySelectorAll('.faq-item button').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        const isOpen = !answer.classList.contains('hidden');
+
+        // Fecha todos
+        document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+        document.querySelectorAll('.faq-item button i').forEach(ic => ic.classList.remove('rotate-180'));
+
+        if (!isOpen) {
+          answer.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // Envio do Diagnóstico Consultivo para WhatsApp
+    function enviarDiagnostico() {
+      const op = document.getElementById('diag-op').value;
+      const mat = document.getElementById('diag-mat').value;
+      const proc = document.getElementById('diag-proc').value;
+      const cidade = document.getElementById('diag-cidade').value;
+
+      const texto = `Olá, equipe da TB Gases! Gostaria de uma indicação técnica para a minha operação:%0A%0A` +
+        `• *Operação:* ${encodeURIComponent(op)}%0A` +
+        `• *Material:* ${encodeURIComponent(mat)}%0A` +
+        `• *Processo de Solda:* ${encodeURIComponent(proc)}%0A` +
+        `• *Cidade para entrega:* ${encodeURIComponent(cidade)}%0A%0A` +
+        `Poderiam me orientar sobre os melhores gases/insumos e me passar um orçamento?`;
+
+      const url = `https://wa.me/5551992166743?text=${texto}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
