@@ -1,0 +1,7 @@
+# Redirecionamento permanente do subdomínio Netlify para o domínio próprio canônico
+https://tbgases.netlify.app/*   https://tbgases.com.br/:splat   301!
+
+# Redirecionamento de www para sem-www (ou domínio canônico)
+https://www.tbgases.com.br/*   https://tbgases.com.br/:splat   301!
+http://www.tbgases.com.br/*    https://tbgases.com.br/:splat   301!
+http://tbgases.com.br/*        https://tbgases.com.br/:splat   301!
