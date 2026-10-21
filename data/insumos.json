@@ -1,0 +1,31 @@
+{
+  "produtos": [
+    {
+      "id": "arame-mig",
+      "nome": "Arame MIG Cobreado",
+      "badge": "MIG / MAG",
+      "badge_cor": "blue",
+      "descricao": "Bobinas de 15kg e 5kg nos diâmetros 0,8mm, 1,0mm e 1,2mm para soldagem contínua de aço carbono com excelente rendimento.",
+      "imagem": "assets/produtos/arame-de-solda-mig.png",
+      "cta_texto": "Cotar Arame MIG"
+    },
+    {
+      "id": "eletrodos",
+      "nome": "Eletrodos E6013 e E7018",
+      "badge": "Eletrodo Revestido",
+      "badge_cor": "emerald",
+      "descricao": "Eletrodos para serralheria geral, caldeiraria pesada, estruturas e manutenção mecânica nos diâmetros 2,5mm, 3,25mm e 4,0mm.",
+      "imagem": "assets/produtos/eletrodo-de-solda.png",
+      "cta_texto": "Cotar Eletrodos"
+    },
+    {
+      "id": "consumiveis",
+      "nome": "Tochas, Bicos & Difusores",
+      "badge": "Consumíveis & Tochas",
+      "badge_cor": "purple",
+      "descricao": "Linha completa de peças de desgaste: tochas MIG/TIG, bocais, difusores, guia-espiral e consumíveis em geral para reposição imediata.",
+      "imagem": "assets/produtos/consumiveis-e-acessorios.png",
+      "cta_texto": "Cotar Consumíveis"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "produtos": [
+    {
+      "id": "maquina-mig",
+      "nome": "Máquinas de Solda MIG/MAG",
+      "badge": "MIG / MAG Industrial",
+      "badge_cor": "blue",
+      "descricao": "Inversoras e fontes compactas e industriais monofásicas e trifásicas para média e alta produtividade em estruturas e chaparias.",
+      "imagem": "assets/produtos/maquina-de-solda-mig.png",
+      "cta_texto": "Consultar Modelos MIG"
+    },
+    {
+      "id": "inversor-mma",
+      "nome": "Inversores Eletrodo (MMA)",
+      "badge": "Portátil & Potente",
+      "badge_cor": "emerald",
+      "descricao": "Fontes leves, econômicas e portáteis com tecnologia IGBT. Ideais para montagens externas, serralheiros e manutenções de campo.",
+      "imagem": "assets/produtos/inversor-de-solda.png",
+      "cta_texto": "Consultar Inversores"
+    },
+    {
+      "id": "maquina-tig",
+      "nome": "Máquinas de Solda TIG (AC/DC)",
+      "badge": "Alta Precisão",
+      "badge_cor": "purple",
+      "descricao": "Para acabamentos nobres, soldagem de inox, tubulações sanitárias e ligas de alumínio com abertura de arco por alta frequência.",
+      "imagem": "assets/produtos/maquina-de-solda-tig.png",
+      "cta_texto": "Consultar Linha TIG"
+    }
+  ]
+}

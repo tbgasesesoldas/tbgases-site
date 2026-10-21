@@ -44,6 +44,9 @@
   <link rel="apple-touch-icon" href="assets/img/logo-horizontal.png">
   <meta name="theme-color" content="#0c1017">
 
+  <!-- Netlify Identity Widget (para autenticação de administradores do CMS) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
   <!-- Schema.org Dados Estruturados (JSON-LD) para Google Rich Results & Local Business -->
   <script type="application/ld+json">
   {
@@ -504,7 +507,7 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="gases-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           
           <!-- Card Oxigênio -->
           <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
@@ -633,7 +636,7 @@
           </div>
 
           <!-- Card Especial: Outros Gases -->
-          <div class="p-6 rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 hover:border-brand-blue transition duration-200 flex flex-col justify-between text-center items-center">
+          <div id="card-outro-gas" class="p-6 rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 hover:border-brand-blue transition duration-200 flex flex-col justify-between text-center items-center">
             <div class="py-4">
               <div class="w-12 h-12 rounded-full bg-brand-surface text-brand-blue flex items-center justify-center mx-auto mb-3 text-xl">
                 <i class="ph ph-flask"></i>
@@ -660,7 +663,7 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="insumos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           
           <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
             <div>
@@ -718,7 +721,7 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="equipamentos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           
           <div class="group p-5 sm:p-6 rounded-2xl border border-slate-200 bg-white hover:border-brand-blue/50 hover:shadow-xl transition duration-300 flex flex-col justify-between">
             <div>
@@ -997,7 +1000,7 @@
           <!-- Badges dos 9 municípios -->
           <div class="pt-2">
             <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Municípios atendidos com rotas frequentes:</p>
-            <div class="flex flex-wrap gap-2.5">
+            <div id="cidades-container" class="flex flex-wrap gap-2.5">
               <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs font-bold hover:bg-brand-navy hover:text-white transition shadow-sm">
                 <i class="ph-fill ph-map-pin text-brand-red"></i> Santa Cruz do Sul
               </span>
@@ -1084,7 +1087,7 @@
         </p>
       </div>
 
-      <div class="space-y-4">
+      <div id="faq-container" class="space-y-4">
         
         <!-- Pergunta 1 -->
         <div class="faq-item bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
@@ -1211,21 +1214,21 @@
           <ul class="space-y-2.5 text-xs">
             <li class="flex items-start gap-2">
               <i class="ph-fill ph-whatsapp-logo text-brand-whatsapp text-sm mt-0.5"></i>
-              <span>WhatsApp: <a href="https://wa.me/555137152221" class="hover:text-white font-semibold">(51) 3715-2221</a></span>
+              <span>WhatsApp: <a href="https://wa.me/555137152221" class="hover:text-white font-semibold data-whatsapp-text">(51) 3715-2221</a></span>
             </li>
             <li class="flex items-start gap-2">
               <i class="ph-fill ph-phone text-slate-300 text-sm mt-0.5"></i>
-              <span>Telefone: (51) 3715-6414 / 3715-2221</span>
+              <span>Telefone: <span class="data-telefone-text">(51) 3715-6414 / 3715-2221</span></span>
             </li>
             <li class="flex items-start gap-2">
               <i class="ph-fill ph-envelope text-slate-300 text-sm mt-0.5"></i>
-              <span>E-mail: tbgases@tbgases.com.br</span>
+              <span>E-mail: <span class="data-email-text">tbgases@tbgases.com.br</span></span>
             </li>
             <li class="flex items-start gap-2">
               <i class="ph-fill ph-clock text-slate-300 text-sm mt-0.5"></i>
               <div class="space-y-0.5 leading-relaxed">
-                <span class="block">Segunda a sexta: 8:00 às 12:00 - 13:30 às 18:00</span>
-                <span class="block">Sábado: 8:00 às 11:30</span>
+                <span class="block data-horario-semana">Segunda a sexta: 8:00 às 12:00 - 13:30 às 18:00</span>
+                <span class="block data-horario-sabado">Sábado: 8:00 às 11:30</span>
               </div>
             </li>
           </ul>
@@ -1235,8 +1238,8 @@
         <div>
           <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Endereço</h4>
           <p class="text-xs text-slate-400 leading-relaxed">
-            Av. Gaspar Bartholomay, 286 - Sala 2<br>
-            Santa Cruz do Sul/RS
+            <span class="data-endereco-linha1">Av. Gaspar Bartholomay, 286 - Sala 2</span><br>
+            <span class="data-endereco-linha2">Santa Cruz do Sul/RS</span>
           </p>
         </div>
 
@@ -1326,6 +1329,22 @@
       window.open(url, '_blank');
     }
   </script>
+
+  <!-- Redirecionamento e inicialização do Netlify Identity (autenticação de convite/login para o CMS) -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+
+  <!-- Sincronização Dinâmica dos dados do CMS (Sveltia CMS / Decap) -->
+  <script src="assets/js/cms-data.js?v=1.0"></script>
 
 </body>
 </html>

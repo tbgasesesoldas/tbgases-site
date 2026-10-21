@@ -1,0 +1,58 @@
+{
+  "produtos": [
+    {
+      "id": "oxigenio",
+      "nome": "Oxigênio Industrial",
+      "badge": "Oxigênio (O₂)",
+      "badge_cor": "emerald",
+      "descricao": "Indicado para processos de oxicorte, solda oxiacetilênica e aquecimento de peças metálicas.",
+      "imagem": "assets/produtos/cilindro-oxigenio.png",
+      "cta_texto": "Cotar Oxigênio"
+    },
+    {
+      "id": "acetileno",
+      "nome": "Acetileno",
+      "badge": "Acetileno (C₂H₂)",
+      "badge_cor": "red",
+      "descricao": "Gás de maior temperatura de chama, ideal para brasagem, corte severo e soldas em geral.",
+      "imagem": "assets/produtos/cilindro-acetileno.png",
+      "cta_texto": "Cotar Acetileno"
+    },
+    {
+      "id": "argonio",
+      "nome": "Argônio",
+      "badge": "Argônio (Ar)",
+      "badge_cor": "blue",
+      "descricao": "Gás nobre inerte de alta pureza, indispensável para soldagem TIG em aço inox, alumínio e processos especiais.",
+      "imagem": "assets/produtos/cilindro-argonio.png",
+      "cta_texto": "Cotar Argônio"
+    },
+    {
+      "id": "mistura",
+      "nome": "Mistura para Solda (Ar/CO₂)",
+      "badge": "Mistura Ar/CO₂",
+      "badge_cor": "blue",
+      "descricao": "Proporção balanceada para excelente penetração e redução drástica de respingos na solda MIG.",
+      "imagem": "assets/produtos/cilindro-mistura.png",
+      "cta_texto": "Cotar Mistura MIG"
+    },
+    {
+      "id": "co2",
+      "nome": "Dióxido de Carbono (CO₂)",
+      "badge": "CO₂ Puro",
+      "badge_cor": "slate",
+      "descricao": "Opção econômica para soldagem de aços carbono com boa penetração em chapas médias e grossas.",
+      "imagem": "assets/produtos/cilindro-dioxido.png",
+      "cta_texto": "Cotar CO₂"
+    },
+    {
+      "id": "nitrogenio",
+      "nome": "Nitrogênio",
+      "badge": "Nitrogênio (N₂)",
+      "badge_cor": "amber",
+      "descricao": "Gás inerte utilizado para purga de tubulações, teste de estanqueidade e corte a laser.",
+      "imagem": "assets/produtos/cilindro-nitrogenio.png",
+      "cta_texto": "Cotar Nitrogênio"
+    }
+  ]
+}

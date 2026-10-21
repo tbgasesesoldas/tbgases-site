@@ -1,0 +1,128 @@
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://tbgases.com.br
+display_url: https://tbgases.com.br
+logo_url: /assets/logo-header.svg
+
+media_folder: assets/produtos
+public_folder: assets/produtos
+
+locale: pt
+
+collections:
+  - name: gases
+    label: "Gases Industriais"
+    icon: local_gas_station
+    file: "data/gases.json"
+    fields:
+      - label: "Lista de Gases"
+        name: produtos
+        widget: list
+        summary: "{{fields.nome}} ({{fields.badge}})"
+        fields:
+          - { label: "ID do Produto (sem espaços)", name: id, widget: string }
+          - { label: "Nome do Produto", name: nome, widget: string }
+          - { label: "Fórmula / Identificação", name: badge, widget: string }
+          - label: "Cor do Badge"
+            name: badge_cor
+            widget: select
+            options:
+              - { label: "Verde Esmeralda (Oxigênio)", value: "emerald" }
+              - { label: "Vermelho (Acetileno)", value: "red" }
+              - { label: "Azul (Argônio / Mistura)", value: "blue" }
+              - { label: "Cinza (CO2)", value: "slate" }
+              - { label: "Âmbar / Amarelo (Nitrogênio)", value: "amber" }
+            default: "blue"
+          - { label: "Descrição Técnica e Aplicações", name: descricao, widget: text }
+          - { label: "Imagem do Cilindro (Sem Fundo)", name: imagem, widget: image }
+          - { label: "Texto do Botão de Cotação", name: cta_texto, widget: string, default: "Cotar no WhatsApp" }
+
+  - name: insumos
+    label: "Insumos de Solda"
+    icon: inventory_2
+    file: "data/insumos.json"
+    fields:
+      - label: "Lista de Insumos e Acessórios"
+        name: produtos
+        widget: list
+        summary: "{{fields.nome}}"
+        fields:
+          - { label: "ID do Produto (sem espaços)", name: id, widget: string }
+          - { label: "Nome do Produto", name: nome, widget: string }
+          - { label: "Categoria / Processo", name: badge, widget: string }
+          - label: "Cor do Badge"
+            name: badge_cor
+            widget: select
+            options:
+              - { label: "Azul (MIG/MAG)", value: "blue" }
+              - { label: "Verde (Eletrodo Revestido)", value: "emerald" }
+              - { label: "Roxo (Tochas & Consumíveis)", value: "purple" }
+            default: "blue"
+          - { label: "Descrição e Especificações", name: descricao, widget: text }
+          - { label: "Imagem do Produto (Sem Fundo)", name: imagem, widget: image }
+          - { label: "Texto do Botão de Cotação", name: cta_texto, widget: string, default: "Cotar Insumos" }
+
+  - name: equipamentos
+    label: "Máquinas & Equipamentos"
+    icon: construction
+    file: "data/equipamentos.json"
+    fields:
+      - label: "Lista de Equipamentos"
+        name: produtos
+        widget: list
+        summary: "{{fields.nome}}"
+        fields:
+          - { label: "ID do Equipamento", name: id, widget: string }
+          - { label: "Nome do Equipamento", name: nome, widget: string }
+          - { label: "Categoria / Tipo", name: badge, widget: string }
+          - label: "Cor do Badge"
+            name: badge_cor
+            widget: select
+            options:
+              - { label: "Azul (MIG/MAG Industrial)", value: "blue" }
+              - { label: "Verde (Portátil & Inversor)", value: "emerald" }
+              - { label: "Roxo (TIG Alta Precisão)", value: "purple" }
+            default: "blue"
+          - { label: "Descrição e Características", name: descricao, widget: text }
+          - { label: "Imagem do Equipamento (Sem Fundo)", name: imagem, widget: image }
+          - { label: "Texto do Botão de Consulta", name: cta_texto, widget: string, default: "Consultar Equipamento" }
+
+  - name: contato
+    label: "Contato & Atendimento"
+    icon: contact_phone
+    file: "data/contato.json"
+    fields:
+      - { label: "WhatsApp (Exibição com máscara)", name: whatsapp, widget: string }
+      - { label: "WhatsApp (Apenas números com DDD, ex: 555137152221)", name: whatsapp_numero, widget: string }
+      - { label: "Telefone Fixo", name: telefone, widget: string }
+      - { label: "E-mail Oficial", name: email, widget: string }
+      - { label: "Endereço Linha 1 (Rua/Avenida e Número)", name: endereco_linha1, widget: string }
+      - { label: "Endereço Linha 2 (Cidade e UF)", name: endereco_linha2, widget: string }
+      - { label: "Link do Instagram", name: instagram_url, widget: string }
+      - { label: "Horário de Segunda a Sexta", name: horario_semana, widget: string }
+      - { label: "Horário de Sábado", name: horario_sabado, widget: string }
+
+  - name: cidades
+    label: "Cidades Atendidas"
+    icon: location_on
+    file: "data/cidades.json"
+    fields:
+      - label: "Municípios Atendidos com Entrega Própria"
+        name: cidades
+        widget: list
+        field: { label: "Nome do Município", name: cidade, widget: string }
+
+  - name: faq
+    label: "Dúvidas Frequentes (FAQ)"
+    icon: help
+    file: "data/faq.json"
+    fields:
+      - label: "Perguntas e Respostas"
+        name: perguntas
+        widget: list
+        summary: "{{fields.pergunta}}"
+        fields:
+          - { label: "Pergunta", name: pergunta, widget: string }
+          - { label: "Resposta Completa", name: resposta, widget: text }

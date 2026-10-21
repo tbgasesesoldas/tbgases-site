@@ -1,0 +1,20 @@
+{
+  "perguntas": [
+    {
+      "pergunta": "Como funciona a reposição de gases industriais?",
+      "resposta": "Você pode solicitar a recarga diretamente pelo WhatsApp. Entregamos os cilindros cheios e recolhemos os cilindros vazios no seu estabelecimento dentro da rota programada."
+    },
+    {
+      "pergunta": "Vocês trabalham com cilindros próprios ou em comodato?",
+      "resposta": "Atendemos tanto clientes que possuem cilindros próprios quanto empresas que necessitam de regimes de comodato/locação conforme o volume e a frequência de consumo. Converse com nossa equipe para definir o melhor modelo para o seu negócio."
+    },
+    {
+      "pergunta": "Qual a mistura de gás recomendada para solda MIG em aço carbono?",
+      "resposta": "A mistura padrão mais recomendada é Ar/CO₂ (geralmente 75% a 80% de Argônio e restante de Dióxido de Carbono). Ela reduz drasticamente os respingos, gera um cordão de solda mais limpo e melhora a produtividade em comparação ao CO₂ puro."
+    },
+    {
+      "pergunta": "Como faço para fazer um pedido com urgência?",
+      "resposta": "Basta enviar uma mensagem no nosso WhatsApp oficial (51) 3715-2221 ou ligar no (51) 3715-6414 sinalizando a urgência. Nossa logística prioriza pedidos emergenciais para evitar parada da sua produção."
+    }
+  ]
+}
