@@ -26,6 +26,15 @@
       "descricao": "Linha completa de peças de desgaste: tochas MIG/TIG, bocais, difusores, guia-espiral e consumíveis em geral para reposição imediata.",
       "imagem": "assets/produtos/consumiveis-e-acessorios.png",
       "cta_texto": "Cotar Consumíveis"
+    },
+    {
+      "badge_cor": "purple",
+      "cta_texto": "Cotar Insumos",
+      "id": "teste",
+      "nome": "Produto de Teste",
+      "badge": "Acessórios",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum, arcu sed lobortis commodo, nisi erat dapibus enim, at sagittis purus lorem ut lorem. ",
+      "imagem": "assets/produtos/consumiveis-e-acessorios.png"
     }
   ]
 }
