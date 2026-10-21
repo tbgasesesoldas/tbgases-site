@@ -138,3 +138,33 @@ collections:
             fields:
               - { label: "Pergunta", name: pergunta, widget: string }
               - { label: "Resposta Completa", name: resposta, widget: text }
+
+  - name: destaques
+    label: "Banners & Imagens de Destaque"
+    files:
+      - label: "Banner Hero (Topo do Site - Frota)"
+        name: hero
+        file: "data/destaque_hero.json"
+        fields:
+          - { label: "Imagem do Banner", name: imagem, widget: image }
+          - { label: "Badge Superior", name: badge, widget: string }
+          - { label: "Título", name: titulo, widget: string }
+          - { label: "Descrição", name: descricao, widget: text }
+
+      - label: "Banner Sobre a TB (Técnico / Operação)"
+        name: sobre
+        file: "data/destaque_sobre.json"
+        fields:
+          - { label: "Imagem do Banner", name: imagem, widget: image }
+          - { label: "Badge Superior", name: badge, widget: string }
+          - { label: "Título", name: titulo, widget: string }
+          - { label: "Descrição", name: descricao, widget: text }
+
+      - label: "Banner Cidades Atendidas (Motorista / Delivery)"
+        name: cidades
+        file: "data/destaque_cidades.json"
+        fields:
+          - { label: "Imagem do Banner", name: imagem, widget: image }
+          - { label: "Badge Superior", name: badge, widget: string }
+          - { label: "Título", name: titulo, widget: string }
+          - { label: "Descrição", name: descricao, widget: text }

@@ -188,9 +188,45 @@
     } catch (e) {}
   }
 
+  // Helper para atualizar um banner de destaque
+  function applyDestaque(prefix, data) {
+    if (!data) return;
+    const imgEl = document.getElementById(`destaque-${prefix}-img`);
+    const badgeEl = document.getElementById(`destaque-${prefix}-badge`);
+    const tituloEl = document.getElementById(`destaque-${prefix}-titulo`);
+    const descEl = document.getElementById(`destaque-${prefix}-desc`);
+
+    if (imgEl && data.imagem) {
+      imgEl.src = data.imagem.replace(/^\/?/, '');
+    }
+    if (badgeEl && data.badge) {
+      badgeEl.textContent = data.badge;
+    }
+    if (tituloEl && data.titulo) {
+      tituloEl.textContent = data.titulo;
+    }
+    if (descEl && data.descricao) {
+      descEl.textContent = data.descricao;
+    }
+  }
+
+  // Sincroniza Banners e Imagens de Destaque (Hero, Sobre, Cidades)
+  async function syncDestaques() {
+    const banners = ['hero', 'sobre', 'cidades'];
+    await Promise.all(banners.map(async b => {
+      try {
+        const res = await fetch(`/data/destaque_${b}.json?v=` + Date.now());
+        if (res.ok) {
+          const data = await res.json();
+          applyDestaque(b, data);
+        }
+      } catch (e) {}
+    }));
+  }
+
   // Inicialização no DOMContentLoaded
   document.addEventListener('DOMContentLoaded', async () => {
     await syncContato();
-    await Promise.all([syncProdutos(), syncCidades(), syncFaq()]);
+    await Promise.all([syncProdutos(), syncCidades(), syncFaq(), syncDestaques()]);
   });
 })();
