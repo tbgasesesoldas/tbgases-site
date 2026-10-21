@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) - Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6RCMWETS7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-H6RCMWETS7', {
+      send_page_view: true
+    });
+  </script>
   
   <!-- SEO Primário -->
   <title>TB Gases & Soldas | Gases Industriais, Insumos e Máquinas de Solda em Santa Cruz do Sul</title>
@@ -1323,6 +1335,11 @@
       const proc = document.getElementById('diag-proc').value;
       const cidade = document.getElementById('diag-cidade').value;
 
+      // Dispara evento GA4 de Diagnóstico Técnico
+      if (typeof window.tbTrackDiagnostic === 'function') {
+        window.tbTrackDiagnostic(op, mat, proc, cidade);
+      }
+
       const texto = `Olá, equipe da TB Gases! Gostaria de uma indicação técnica para a minha operação:%0A%0A` +
         `• *Operação:* ${encodeURIComponent(op)}%0A` +
         `• *Material:* ${encodeURIComponent(mat)}%0A` +
@@ -1350,6 +1367,9 @@
 
   <!-- Sincronização Dinâmica dos dados do CMS (Sveltia CMS / Decap) -->
   <script src="assets/js/cms-data.js?v=1.0"></script>
+
+  <!-- Tracking Inteligente de Conversões (GA4 & Eventos) -->
+  <script src="assets/js/tracking.js?v=1.0"></script>
 
 </body>
 </html>
