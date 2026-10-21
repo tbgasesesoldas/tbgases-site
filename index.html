@@ -1340,6 +1340,15 @@
           });
         }
       });
+
+      // Se a URL contiver hash de convite ou confirmação, abre o modal imediatamente
+      if (window.location.hash && (
+        window.location.hash.indexOf('_token=') !== -1 ||
+        window.location.hash.indexOf('invite_token=') !== -1 ||
+        window.location.hash.indexOf('recovery_token=') !== -1
+      )) {
+        window.netlifyIdentity.open();
+      }
     }
   </script>
 

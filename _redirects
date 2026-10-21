@@ -5,3 +5,7 @@ https://tbgases.netlify.app/*   https://tbgases.com.br/:splat   301!
 https://www.tbgases.com.br/*   https://tbgases.com.br/:splat   301!
 http://www.tbgases.com.br/*    https://tbgases.com.br/:splat   301!
 http://tbgases.com.br/*        https://tbgases.com.br/:splat   301!
+
+# Painel Administrativo CMS (SPA Route)
+/admin/*                       /admin/index.html               200
+

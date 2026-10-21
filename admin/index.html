@@ -12,5 +12,18 @@
 <body>
   <!-- Sveltia CMS: Painel Git-based moderno, ultra-rápido e intuitivo -->
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+
+  <script>
+    if (window.netlifyIdentity) {
+      // Se houver token de convite no admin, abre modal para definir senha
+      if (window.location.hash && (
+        window.location.hash.indexOf('_token=') !== -1 ||
+        window.location.hash.indexOf('invite_token=') !== -1 ||
+        window.location.hash.indexOf('recovery_token=') !== -1
+      )) {
+        window.netlifyIdentity.open();
+      }
+    }
+  </script>
 </body>
 </html>
